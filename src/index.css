@@ -1,0 +1,48 @@
+/* Global reset & base */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+:root{
+  --bg: #070b16;
+  --text: #f1f5f9;
+  --brand: #38bdf8;
+  --brand-strong: #06b6d4;
+}
+
+body{
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, 'Poppins', Helvetica, Arial, 'Apple Color Emoji','Segoe UI Emoji';
+  background:
+    radial-gradient(1200px 800px at 80% -10%, rgba(56,189,248,.12), transparent),
+    radial-gradient(1400px 900px at -10% 110%, rgba(56,189,248,.08), transparent),
+    var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color .3s ease, color .3s ease;
+}
+
+a{ color: var(--brand); text-decoration: none; }
+a:hover{ text-decoration: none; }
+img{ max-width: 100%; display: block; }
+:focus-visible{
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+/* Light mode root colors */
+:root[data-theme='light']{
+  --bg: #f7fafc;
+  --text: #0f172a;
+  --brand: #0ea5e9;
+  --brand-strong: #0284c7;
+}
+
+/* Light mode background tweaks */
+:root[data-theme='light'] body{
+  background:
+    radial-gradient(1200px 800px at 80% -10%, rgba(14,165,233,.12), transparent),
+    radial-gradient(1400px 900px at -10% 110%, rgba(14,165,233,.08), transparent),
+    var(--bg);
+}

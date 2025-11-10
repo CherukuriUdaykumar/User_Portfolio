@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <!-- FAVICON (place public/favicon.ico) -->
+    <link rel="icon" href="src\assets\favicon.png" />
+
+    <!-- PRE-FLIGHT: Force dark theme on every page load (prevents flash of light).
+         Per your requirement: dark on refresh; user can temporarily toggle to light in-session.
+         This runs before CSS loads so the correct theme variables are applied immediately. -->
+    <script>
+      (function () {
+        try {
+          document.documentElement.setAttribute("data-theme", "dark");
+        } catch (e) {}
+      })();
+    </script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cherukuri Udaykumar | Portfolio</title>
+
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
